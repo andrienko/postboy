@@ -1,0 +1,32 @@
+{
+  "name": "postboy",
+  "version": "0.0.1",
+  "description": "A command line tool to prepare emails",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrienko/postboy.git"
+  },
+  "keywords": [
+    "mail",
+    "preparation"
+  ],
+  "author": "andrienko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrienko/postboy/issues"
+  },
+  "homepage": "https://github.com/andrienko/postboy#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "extend": "^3.0.0",
+    "juice": "^1.9.0",
+    "nunjucks-append": "0.0.3",
+    "nunjucks-capture": "^1.0.3",
+    "nunjucks-date": "^1.2.0",
+    "nunjucks-markdown": "^1.1.0"
+  }
+}

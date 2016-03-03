@@ -1,0 +1,8 @@
+img{
+  display:block;
+  border:none;
+}
+a, a>span{
+  color: #f00;
+  text-decoration: none;
+}

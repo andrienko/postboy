@@ -1,4 +1,7 @@
-** Note: This is not usable yet. Under development. None of these actually work. Et cetera. This readme is unfinished. Go away! Well maybe put on track and go away :3**
+** Note: This is not usable yet. Under development. None of these actually work. Et cetera. This readme is unfinished. Go away! Well maybe put on track and go away :3. But we already have a badass quote:**
+
+> Ugly problems often require ugly solutions. Solving an ugly problem in a pure manner is bloody hard.
+*Rasmus Lerdorf*
 
 PostBoy
 ===

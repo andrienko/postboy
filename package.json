@@ -21,12 +21,13 @@
   },
   "homepage": "https://github.com/andrienko/postboy#readme",
   "dependencies": {
-    "cheerio": "^0.20.0",
+    "cheerio": "^0.22.0",
     "extend": "^3.0.0",
-    "juice": "^1.9.0",
+    "juice": "^4.0.2",
+    "less": "^2.7.2",
     "nunjucks-append": "0.0.3",
     "nunjucks-capture": "^1.0.3",
     "nunjucks-date": "^1.2.0",
-    "nunjucks-markdown": "^1.1.0"
+    "nunjucks-markdown": "^2.0.1"
   }
 }

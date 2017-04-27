@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+<table width="{{outer}}" cellspacing="0" cellpadding="0" border="0" bgcolor="{{blue}}" style="width:{{outer}}px;">
+
+
+  {{vindent (16,'#eeeeee')}}
+
+  <tr>
+      <td colspan="3" align="center" style="text-align:center;background:#eeeeee;" bgcolor="#eeeeee;">
+        <div class="optout_header">
+          Sollte diese Mail nicht korrekt dargestellt werden, klicken Sie bitte <a href="#">hier</a>.
+        </div>
+      </td>
+  </tr>   
+
+  {{vindent (16,'#eeeeee')}}
+
+  <!--Vikings logo-->
+  <tr>
+      <td colspan="3" style="line-height: 600px;font-size:24px;text-align:center;color:#52c2ec;font-style: italic;font-weight: bold;">
+          <img src="{{img}}/header_main.jpg" border="0" width="{{outer}}" height="600" alt="VIKINGS go WILD" style="display:block;float: left;"/>
+      </td>
+  </tr>   
+
+  <!--Content-->
+  <tr style="background:#181818;">
+      
+      <td width="{{sides}}" style="width:{{sides}}px;background:{{blue}};" bgcolor="{{blue}}">
+          {{indent}}
+      </td>
+
+      <td align="left" style="width:{{inner}}px;background:{{creamy}};" bgcolor="{{creamy}}" width="{{inner}}">
+      
+        {% include "inner.html" %}
+        
+
+      </td>
+      <td width="{{sides}}" style="width:{{sides}}px;background:{{blue}};" bgcolor="{{blue}}">
+          {{indent}}
+      </td>
+  </tr>
+
+
+</table>
+{% endblock %}

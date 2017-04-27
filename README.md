@@ -10,12 +10,24 @@ A simple tool to markup and prepare html mail.
 Features
 ---
 
-  - Nunjucks templating engine used. Also nunjucks-append, nunjucks-capture, nunjucks-date and nunjucks-markdown extensions used.
+  - Nunjucks templating engine used. 
   - Nunjucks extensions introduced for easier tables fiddeling.
-  - Links are wrapped with inner <span> element (for outlook styling, because it is kind of weird)
-  - Short-hand links replacement (e.g. `<body bgcolor="#f0f">` will become `<body bgcolor="#ff00ff">`)
-  - Inline styles from less/css file. Embed styles from other less/css file.
   - Pre-set styles for embedding/inlined (e.g. images with display:inline-block et cetera)
+
+Workflow (how postboy prepares letters for delivery)
+ 
+  - ***you type `postboy init` and get a basic email template with some stuff already set
+  - ***compiles LESS files (`embed.less` and `inline.less`) if any***
+  - compiles nunjucks template (`index.html` file). ***Postboy adds its own plugin for tables. Also nunjucks-append, nunjucks-capture, nunjucks-date and nunjucks-markdown extensions used.***
+  - wraps all anchor elements with `<span>` tag for Outlook styling
+  - inlines CSS styles from `inline.css`
+  - embeds CSS styles from `embed.css`
+  - replaces short-hand colors (`#333` becomes `#333333`)
+  - ***adds image sizes***
+  - *strips comments from HTML*
+
+That is pretty much all.
+The key features are [nunjucks template engine](https://mozilla.github.io/nunjucks/) (with plugins) and [juice](https://www.npmjs.com/package/juice).
 
 Recommendations
 ---
@@ -24,10 +36,14 @@ There are several rules that apply to email mark-up. Of course, if you want it t
 
   - Use tables for mail. Really. CSS is kind of broken mostly in 
   - It's HTML4. Because of outlook and stuff.
-  - Specify image sizes. For god's sake.
+  - Specify image sizes. Every single image size. For god's sake.
 
 Initialization and file structure
 ---
+
+To instsall postboy
+
+    npm install -g postboy
 
 To initialize the project type
 
@@ -46,3 +62,6 @@ This should create a couple folders with couple files in. All the sources will b
        -- layout.html - Main layout (html etc)
        -- macros.html - Macros file. If it exists it will be included
                         in all the files compiled by default.
+
+To build the mail just type `postboy`. It will look for `postboy.js` file in a folder you typed it in.
+    

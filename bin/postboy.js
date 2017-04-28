@@ -10,22 +10,20 @@ var cwd = proccess.cwd();
 var options = {options:{},variables:{}};
 var config_filename = path.resolve(cwd,'.postboy.js');
 
-if(argv._[0] == 'init' && argv._[1] !== undefined){
-  var newname = argv._[1].toLowerCase();
-  var newpath = path.resolve(cwd,newname);
-  if(!fs.existsSync(newpath)){
-    var from = path.resolve(__dirname,'../init/**/*.*');
-    console.log(from);
-    fs.mkdirSync(newpath);
-    recursiveCopy(from, newpath, function (error, results) {
-      if(error){
-        console.log('Error ',error);
-      }
-      console.log('done.');
-    });
-  } else {
-    console.log('Path '+newpath+' already exists :(');
-  }
+if(argv._[0] == 'init'){
+  var newname = argv._[1] || '.';
+  var newpath = path.resolve(cwd,newname.toLowerCase());
+  if(!fs.existsSync(newpath)){fs.mkdirSync(newpath);}
+
+  var from = path.resolve(__dirname,'../init');
+  console.log('From',from);
+  console.log('To',newpath);
+
+  recursiveCopy(from, newpath, function (error, results) {
+    if(error){ console.log('Error ',error);}
+    console.log('Initialized');
+  });
+
 } else {
   if(fs.existsSync(config_filename)){
     try {
@@ -41,5 +39,3 @@ if(argv._[0] == 'init' && argv._[1] !== undefined){
   var instance = new Postboy(options.options, options.variables);
   instance.compile();
 }
-
-process.exit(0);

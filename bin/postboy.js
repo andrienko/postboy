@@ -7,7 +7,7 @@ var recursiveCopy = require('recursive-copy');
 
 var argv = minimist(process.argv.slice(2));
 var cwd = proccess.cwd();
-var options = {options:{},variables:{}};
+var options = {options:{},variables:{},less_variables:{}};
 var config_filename = path.resolve(cwd,'.postboy.js');
 
 if(argv._[0] == 'init'){
@@ -36,6 +36,6 @@ if(argv._[0] == 'init'){
   }
 
   var Postboy = require( path.resolve(__dirname,'..') );
-  var instance = new Postboy(options.options, options.variables);
+  var instance = new Postboy(options.options, options.variables, options.less_variables);
   instance.compile();
 }

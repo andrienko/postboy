@@ -40,5 +40,6 @@ if(argv._[0] == 'init'){
 
   var Postboy = require(path.resolve(__dirname, '..'));
   var instance = new Postboy(options.options, options.variables, options.less_variables);
+  instance.envVars(argv._);
   instance.compile();
 }

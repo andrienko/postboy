@@ -25,17 +25,21 @@ if(argv._[0] == 'init'){
   });
 
 } else {
-  if(fs.existsSync(config_filename)){
+  if (fs.existsSync(config_filename)) {
     try {
+      console.log('Loading config from '+config_filename);
       var config_file = require(config_filename);
       options = Object.assign(options, config_file);
     }
-    catch (e){
-      console.log('Error loading '+config_filename, e);
+    catch (e) {
+      console.log('Error loading ' + config_filename, e);
     }
+  } else {
+    console.log(config_filename + ' not found. Using default config.');
   }
 
-  var Postboy = require( path.resolve(__dirname,'..') );
+  var Postboy = require(path.resolve(__dirname, '..'));
   var instance = new Postboy(options.options, options.variables, options.less_variables);
+  instance.envVars(argv._);
   instance.compile();
 }

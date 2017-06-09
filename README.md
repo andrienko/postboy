@@ -29,6 +29,7 @@ Workflow (how postboy prepares letters for delivery)
   - ***compiles LESS files (`embed.less` and `inline.less`) if any***
   - compiles nunjucks template (`index.html` file). ***Postboy adds its own plugin for tables. Also nunjucks-append, nunjucks-capture, nunjucks-date and nunjucks-markdown extensions used.***
   - wraps all anchor elements with `<span>` tag for Outlook styling
+  - replaces html symbol entities with unicode representation (`&nbsp;` becomes `&#xA0;`)
   - inlines CSS styles from `inline.css`
   - removes CSS classes
   - embeds CSS styles from `embed.css`

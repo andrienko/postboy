@@ -27,6 +27,7 @@
   "dependencies": {
     "cheerio": "^0.22.0",
     "extend": "^3.0.0",
+    "html-beautify": "^1.0.4",
     "juice": "^4.0.2",
     "less": "^2.7.2",
     "minimist": "^1.2.0",

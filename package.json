@@ -1,6 +1,6 @@
 {
   "name": "postboy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A command line tool to prepare emails",
   "main": "lib",
   "scripts": {
@@ -31,6 +31,7 @@
     "juice": "^4.0.2",
     "less": "^2.7.2",
     "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
     "nunjucks": "^3.0.0",
     "nunjucks-append": "0.0.3",
     "nunjucks-capture": "^1.0.3",

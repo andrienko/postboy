@@ -44,6 +44,6 @@ if (argv._[0] == 'init') {
   }
 
   var Postboy = require(path.resolve(__dirname, '..'));
-  var instance = new Postboy(options.options, cwd, argv._);
+  var instance = new Postboy(options, cwd, argv._);
   instance.compile();
 }

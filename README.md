@@ -39,6 +39,8 @@ Workflow (how postboy prepares letters for delivery)
   - *strips comments from HTML*
   - ***Beautifies HTML***
   - ***Validates XML for all your XSLT needs***
+  - ***Archives the templates***
+  - ***Produces different versions of templates***
 
 That is pretty much all.
 

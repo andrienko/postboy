@@ -38,6 +38,7 @@
     "nunjucks-date": "^1.2.0",
     "nunjucks-markdown": "^2.0.1",
     "recursive-copy": "^2.0.6",
+    "special-entities": "^1.0.2",
     "taj": "^0.1.2"
   }
 }

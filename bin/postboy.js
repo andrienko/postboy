@@ -8,10 +8,11 @@ var recursiveCopy = require('recursive-copy');
 
 var argv = minimist(process.argv.slice(2));
 var cwd = proccess.cwd();
-var options = {options: {}, variables: {}, less_variables: {}};
+var options = {};
 
 var config_filename = path.resolve(cwd, '.postboy');
 if (!fs.existsSync(config_filename)) config_filename = path.resolve(cwd, 'postboy.config.js');
+if (!fs.existsSync(config_filename)) config_filename = path.resolve(cwd, 'postboy.config.json');
 
 if (argv._[0] == 'init') {
   var newname = argv._[1] || '.';
@@ -22,9 +23,14 @@ if (argv._[0] == 'init') {
 
   var from = path.resolve(__dirname, '../init');
 
-  recursiveCopy(from, newpath, function (error, results) {
+  recursiveCopy(from, newpath, {dot:true},function (error, results) {
     if (error) {
-      console.log('Error ', error);
+      if(error.code === 'EEXIST'){
+        console.log('Some files, one of which is '+ error.path + ', already exist.');
+      }
+      else {
+        console.log('Error ', error);
+      }
     }
     console.log('Initialized in ' + newpath);
   });
@@ -44,6 +50,6 @@ if (argv._[0] == 'init') {
   }
 
   var Postboy = require(path.resolve(__dirname, '..'));
-  var instance = new Postboy(options.options, cwd, argv._);
+  var instance = new Postboy(options, cwd, argv._);
   instance.compile();
 }

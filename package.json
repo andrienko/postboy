@@ -26,8 +26,6 @@
   "homepage": "https://github.com/andrienko/postboy#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
-    "extend": "^3.0.0",
-    "html-beautify": "^1.0.4",
     "juice": "^4.0.2",
     "less": "^2.7.2",
     "minimist": "^1.2.0",
@@ -37,6 +35,8 @@
     "nunjucks-capture": "^1.0.3",
     "nunjucks-date": "^1.2.0",
     "nunjucks-markdown": "^2.0.1",
+    "postcss": "^6.0.9",
+    "postcss-shorthand-expand": "^1.0.1",
     "recursive-copy": "^2.0.6",
     "special-entities": "^1.0.2",
     "taj": "^0.1.2"

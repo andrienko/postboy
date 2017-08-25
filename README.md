@@ -1,16 +1,15 @@
-
-** Note: This is not usable yet. Under development. None of these actually work. Et cetera. Also the
-readme is unfinished. Go away! Well maybe put on track and go away :3.
-Tho, we already have a badass quote here:**
-
 > Ugly problems often require ugly solutions. Solving an ugly problem in a pure manner is bloody hard.
 *Rasmus Lerdorf*
+
+**Note: This is not usable yet. Under development. None of these actually work. Et cetera. Also the
+readme is unfinished. Go away! Well maybe put on track and go away :3. The behavior may and will change!
+Probably the entire thing will be rewritten after I make sure the tool has everything I need it to.**
 
 PostBoy
 ===
 Postboy is a simple tool to markup and prepare html mail. It utilizes
 [nunjucks templates](https://mozilla.github.io/nunjucks/) (with plugins) for building markup and
-[juice](https://www.npmjs.com/package/juice) for inlining CSS 
+[juice](https://www.npmjs.com/package/juice) for inlining CSS.
 
 Features
 ---
@@ -33,8 +32,8 @@ Workflow (how postboy prepares letters for delivery)
   - inlines CSS styles from `inline.css`
   - removes CSS classes
   - embeds CSS styles from `embed.css`
-  - replaces short-hand colors (`#333` becomes `#333333`)
-  - ***replaces short-hand CSS properties*** 
+  - *replaces short-hand colors (`#333` becomes `#333333`)* (may be unstable)
+  - replaces short-hand CSS properties 
   - ***adds image sizes***
   - *strips comments from HTML*
   - ***Beautifies HTML***
@@ -50,9 +49,10 @@ Recommendations
 There are several rules that apply to email mark-up. Of course, if you want it to look good in most
 popular mailing clients.
 
-  - Use tables for mail. Really. CSS is kind of broken mostly in 
+  - Use tables for mail. Really. CSS is kind of broken mostly in mailers.
   - It's HTML4. Because of outlook and stuff.
   - Specify image sizes. Every single image size. For god's sake.
+  - Use inline styles. Gmail strips all styles but inline ones.
 
 Initialization and file structure
 ---
@@ -67,6 +67,8 @@ To initialize the project type
 
 This should create a couple folders with couple files in. All the sources will be contained within
 **source** folder.
+
+***!!!THE FOLDER STRUCTURE IS DIFFERENT NOW!!!***
 
     source/
     -- css/

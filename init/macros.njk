@@ -1,0 +1,19 @@
+{% macro vindent(size, colspan=3, bgcolor) %}
+  <tr{%if bgcolor%} style="background:{{bgcolor}};" bgcolor:{{bgcolor}}{%endif%}>
+    <td height="{{size}}" style="height: {{size}}px;" colspan="{{colspan}}">
+      {{indent}}
+    </td>
+  </tr>  
+{% endmacro %}
+
+{% macro hindent(size) %}
+  <td width="{{size}}" style="width: {{size}}px;">
+    {{indent}}
+  </td>
+{% endmacro %}
+
+{% macro width(size=0, measurement="px") %}
+  width="{{size}}{{measurement if measurement!="px"}}" style="{{size}}{{measurement}}"
+{%endmacro%}
+
+

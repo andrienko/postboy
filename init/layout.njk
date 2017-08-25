@@ -8,10 +8,10 @@
 
 <body>
  
-  <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#eeeeee" style="width:100%">
+  <table {{ w100p }} {{ tblt }}>
     <tr>
       <td> {{indent}} </td>
-      <td width="{{outer}}" style="width:{{outer}}px">
+      <td>
         {% block content %}
         {% endblock %}
       </td>

@@ -4,6 +4,7 @@ var img = '../img';
 module.exports = {
   strip_comments: false,
   less_vars_to_nunjucks: true,
+  merge_styles: true,
   variables:{
     img: img,
     grey: '#efefef',

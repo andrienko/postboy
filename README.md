@@ -17,7 +17,7 @@ Probably the entire thing will be rewritten after I make sure the tool has every
 Features
 ---
 
-Features not yet implemented are ***bold-italic***. Ones implemented partially are *italic*
+Features not yet implemented are ***bold-italic***. Ones implemented partially or terribly unstable are *italic*
 
   - Nunjucks templating engine used. 
   - Nunjucks extensions introduced for easier tables fiddeling.
@@ -27,10 +27,11 @@ Features not yet implemented are ***bold-italic***. Ones implemented partially a
 
 Workflow (how postboy prepares letters for delivery)
  
-  - ***you type `postboy init` and get a basic email template with some stuff already set
-  - ***compiles LESS files (`embed.less` and `inline.less`) if any***
+  - you type `postboy init` and get a basic email template with some stuff already ses
+  - compiles LESS files (`embed.less` and `inline.less`) if any
   - compiles nunjucks template (`index.html` file). ***Postboy adds its own plugin for tables. Also nunjucks-append, nunjucks-capture, nunjucks-date and nunjucks-markdown extensions used.***
-  - wraps all anchor elements with `<span>` tag for Outlook styling
+  - merges styles and classes. So duplicate class and style attributes are fine (for ease of nunjucks use)
+  - *wraps all anchor elements with `<span>` tag for Outlook styling*
   - replaces html symbol entities with unicode representation (`&nbsp;` becomes `&#xA0;`)
   - inlines CSS styles from `inline.css`
   - removes CSS classes

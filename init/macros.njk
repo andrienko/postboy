@@ -1,9 +1,11 @@
-{% macro vindent(size, colspan=3, bgcolor) %}
-  <tr{%if bgcolor%} style="background:{{bgcolor}};" bgcolor:{{bgcolor}}{%endif%}>
-    <td height="{{size}}" style="height: {{size}}px;" colspan="{{colspan}}">
+{% macro vindent(size, colspan=3, bgcolor=null) %}
+    <!-- Vindent {{ size }}, {{ colspan }}, {{ bgcolor }} -->
+  <tr>
+    <td height="{{size}}" style="height: {{size}}px; {%if bgcolor%}background-color:{{bgcolor}};{%endif%}" {%if bgcolor%}bgcolor="{{bgcolor}}"{% endif %}colspan="{{colspan}}">
       {{indent}}
     </td>
-  </tr>  
+  </tr>
+    <!-- Vindent end -->
 {% endmacro %}
 
 {% macro hindent(size) %}
@@ -13,7 +15,7 @@
 {% endmacro %}
 
 {% macro width(size=0, measurement="px") %}
-  width="{{size}}{{measurement if measurement!="px"}}" style="{{size}}{{measurement}}"
+  width="{{size}}{{measurement if measurement!="px"}}" style="width: {{size}}{{measurement}}"
 {%endmacro%}
 
 

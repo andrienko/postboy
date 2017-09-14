@@ -1,11 +1,14 @@
 //var img = 'http://yourserver.com/images';
 var img = '../img';
 
+var q = function(str){return '"'+str+'"';}
+
 module.exports = {
   strip_comments: false,
-  less_vars_to_nunjucks: true,
+  less_vars_to_nunjucks: false,
   merge_styles: true,
   variables:{
+    title: 'Postboy Example',
     img: img,
     grey: '#efefef',
     title:'Test e-mail',
@@ -17,6 +20,6 @@ module.exports = {
     tblt: 'cellspacing="0" cellpadding="0" border="0"',
   },
   less:{
-    img:img
+    img: q(img)			// Strings passed to LESS must be surrounded with quotes
   }
 };

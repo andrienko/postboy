@@ -1,9 +1,11 @@
+{% from 'macros.njk' import width %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8"/>
-  <title>Hello, postboy!</title>
+  <title>{{ title }}</title>
 </head>
 
 <body>
@@ -11,7 +13,7 @@
   <table {{ w100p }} {{ tblt }}>
     <tr>
       <td> {{indent}} </td>
-      <td>
+      <td {{ width (600) }}>
         {% block content %}
         {% endblock %}
       </td>

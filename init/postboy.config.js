@@ -21,5 +21,14 @@ module.exports = {
   },
   less:{
     img: q(img)			// Strings passed to LESS must be surrounded with quotes
-  }
+  },
+  /*send:{
+    subject: 'Postboy test mail '+(new Date()).toString(),
+    from: 'Postboy <user@server.org>',
+    to: 'other_user@server.org',
+    server: 'mail.server.org',
+    port: 25,
+    login: 'user@server.org',
+    password: 'theP455w0rd'
+  }*/
 };

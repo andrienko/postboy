@@ -1,7 +1,7 @@
 {% macro vindent(size, colspan=3, bgcolor=null) %}
     <!-- Vindent {{ size }}, {{ colspan }}, {{ bgcolor }} -->
   <tr>
-    <td height="{{size}}" style="height: {{size}}px; {%if bgcolor%}background-color:{{bgcolor}};{%endif%}" {%if bgcolor%}bgcolor="{{bgcolor}}"{% endif %}colspan="{{colspan}}">
+    <td height="{{size}}" style="line-height: {{ size }}px;height: {{size}}px; {%if bgcolor%}background-color:{{bgcolor}};{%endif%}" {%if bgcolor%}bgcolor="{{bgcolor}}"{% endif %}colspan="{{colspan}}">
       {{indent}}
     </td>
   </tr>

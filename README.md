@@ -23,7 +23,7 @@ Features not yet implemented are ***bold-italic***. Ones implemented partially o
   - Nunjucks extensions introduced for easier tables fiddeling.
   - Pre-set styles for embedding/inlined (e.g. images with display:inline-block et cetera)
   - ***ability to watch files for changes and compile them***
-  - ***you can setup an SMTP server to send test e-mails***
+  - *you can setup an SMTP server to send test e-mails*
 
 Workflow (how postboy prepares letters for delivery)
  
@@ -45,7 +45,31 @@ Workflow (how postboy prepares letters for delivery)
   - ***Archives the templates***
   - ***Produces different versions of templates***
 
-That is pretty much all.
+Sending test e-mails
+---
+
+If you have an access to some kind of a SMTP server - you can use `postboy send` to send an email to some destination.
+To do this - add `send` key in your pstboy.config.js:
+
+
+    send:{
+      to: 'ilia@andrienko.org',
+      server: 'mail.adm.tools',
+      port: 25,
+      login: 'noreply@server.com',
+      password: 'someKindOfPasswordHere',
+      subject: 'Test mail',
+      from: 'Postboy <noreply@server.com>'
+    }
+
+SMTP `server`, `login` and `password` are required, as well as `to`, which is is the address that the mails will be sent
+to. By default, `subject` will be current date and `port` will be 25, `from` will be "Postboy".
+
+Plans
+---
+
+  - sending via gmail or whatever nodemailer is capable of
+
 
 Recommendations
 ---
@@ -57,6 +81,10 @@ popular mailing clients.
   - It's HTML4. Because of outlook and stuff.
   - Specify image sizes. Every single image size. For god's sake.
   - Use inline styles. Gmail strips all styles but inline ones.
+  - ...
+
+Okay, I think the recommendations would require me to write the entire article. Or a book maybe.
+Probably one day I will.
 
 Initialization and file structure
 ---

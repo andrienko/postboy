@@ -30,6 +30,8 @@
     "less": "^2.7.2",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
+    "nodemailer": "^4.1.0",
+    "nodemailer-smtp-transport": "^2.7.4",
     "nunjucks": "^3.0.0",
     "nunjucks-append": "0.0.3",
     "nunjucks-capture": "^1.0.3",

@@ -37,13 +37,8 @@ Workflow (how postboy prepares letters for delivery)
   - removes CSS classes
   - embeds CSS styles from `embed.css`
   - *replaces short-hand colors (`#333` becomes `#333333`)* (may be unstable)
-  - replaces short-hand CSS properties 
-  - ***adds image sizes***
+  - replaces short-hand CSS properties
   - *strips comments from HTML*
-  - ***Beautifies HTML***
-  - ***Validates XML for all your XSLT needs***
-  - ***Archives the templates***
-  - ***Produces different versions of templates***
 
 Sending test e-mails
 ---
@@ -68,8 +63,16 @@ to. By default, `subject` will be current date and `port` will be 25, `from` wil
 Plans
 ---
 
+  - fix empty tags (empty tags are now turning into self-closing)
+  - add self-closing tags
+  - move entities decoding to the end of workflow
   - sending via gmail or whatever nodemailer is capable of
-
+  - Beautifies HTML
+  - Validates XML for all your XSLT needs
+  - Archives the templates
+  - Produces different versions of templates
+  - Watcher
+  - Image sizes
 
 Recommendations
 ---

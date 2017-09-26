@@ -8,7 +8,6 @@ module.exports = {
   less_vars_to_nunjucks: false,
   merge_styles: true,
   variables:{
-    title: 'Postboy Example',
     img: img,
     grey: '#efefef',
     title:'Test e-mail',

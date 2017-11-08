@@ -1,0 +1,13 @@
+Postboy is a tool to prepare e-mails
+---
+postboy init             - copy default (starter) mail template
+                           into current folder
+postboy init <dirname>   - copy that template to dirname
+postboy                  - build the current e-mail
+
+postboy send             - send a test e-mail with build
+
+postboy -v               - displays version of an app installed
+postboy -h               - displays this help
+---
+'postboy.config.js' file is required for the app to work.

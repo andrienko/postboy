@@ -73,6 +73,7 @@ Plans
   - Produces different versions of templates
   - Watcher
   - Image sizes
+  - integrate this: https://github.com/dudeonthehorse/normalize.email.css
 
 Recommendations
 ---

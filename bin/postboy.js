@@ -4,6 +4,7 @@ var proccess = require('process');
 var path = require('path');
 var fs = require('fs');
 var minimist = require('minimist');
+var merge = require('lodash.merge');
 
 var argv = minimist(process.argv.slice(2));
 var cwd = proccess.cwd();
@@ -27,7 +28,7 @@ if (argv._[0] === 'init') {
     try {
       console.log('Loading config from ' + config_filename);
       var config_file = require(config_filename);
-      options = Object.assign(options, config_file);
+      options = merge(options, config_file);
     }
     catch (e) {
       console.log('Error loading ' + config_filename, e);

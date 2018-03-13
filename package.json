@@ -1,6 +1,6 @@
 {
   "name": "postboy",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A command line tool to build emails",
   "main": "lib",
   "scripts": {
@@ -28,6 +28,7 @@
     "cheerio": "^0.22.0",
     "juice": "^4.0.2",
     "less": "^2.7.2",
+    "lodash.merge": "^4.6.1",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "nodemailer": "^4.1.0",

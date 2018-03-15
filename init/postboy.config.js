@@ -18,7 +18,7 @@ module.exports = {
     w100p: 'style="width:100%" width="100%"',
     tblt: 'cellspacing="0" cellpadding="0" border="0"',
   },
-  less:{
+  less_variables:{
     img: q(img)			// Strings passed to LESS must be surrounded with quotes
   },
   /*send:{

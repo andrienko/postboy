@@ -8,11 +8,12 @@ Postboy is a simple tool to markup and prepare html mail. It utilizes
 [nunjucks templates](https://mozilla.github.io/nunjucks/) (with plugins) for building markup and
 [juice](https://www.npmjs.com/package/juice) for inlining CSS.
 
-**Note: This is not usable yet. Under development. None of these actually work. Et cetera. Also the
-readme is unfinished. Go away! Well maybe put on track and go away :3. The behavior may and will change!
+**Note: This is unstable. The readme is unfinished. Go away!
+Well maybe put on track and go away :3. The behavior and API may and will change over time.
 Probably the entire thing will be rewritten after I make sure the tool has everything I need it to.**
 
-**In future I hope to finish my own HTML parser and use it in postboy**
+**In future I hope to finish my own HTML parser and use it in postboy, until then the entire thing is a set of 
+workarounds and ugly solutions.**
 
 Features
 ---

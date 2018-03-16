@@ -1,6 +1,6 @@
 {
   "name": "postboy",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A command line tool to build emails",
   "main": "lib",
   "scripts": {

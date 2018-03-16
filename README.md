@@ -41,7 +41,7 @@ Workflow (how postboy prepares letters for delivery)
   - replaces short-hand CSS properties
   - *strips comments from HTML*
 
-Sending test e-mails
+Sending test e-mails via SMTP
 ---
 
 If you have an access to some kind of a SMTP server - you can use `postboy send` to send an email to some destination.
@@ -60,6 +60,14 @@ To do this - add `send` key in your pstboy.config.js:
 
 SMTP `server`, `login` and `password` are required, as well as `to`, which is is the address that the mails will be sent
 to. By default, `subject` will be current date and `port` will be 25, `from` will be "Postboy".
+
+Sending test e-mails via gmail
+---
+Config must be same as with SMTP, but do not specify the "server" field and "login" field must be a gmail email
+(e.g., test.mailer.postboy@gmail.com or something like that).
+
+You may also need to  [allow less secure apps](https://myaccount.google.com/u/2/lesssecureapps) in your gmail account,
+gmail itself will give you the instructions as you try to send first email if it fails.
 
 Plans
 ---
